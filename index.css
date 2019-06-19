@@ -15,6 +15,9 @@ h1, h2, h3 {
 #intro h1 {
     font-family: 'Cutive Mono'
 }
+div.full:not(#intro) > h1, .container > h1 {
+    padding-top: 3rem
+}
 .navbar {
     animation: 1s fromtop ease-out;
     -webkit-animation: 1s fromtop ease-out;
