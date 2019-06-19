@@ -27,7 +27,9 @@ h1, h2, h3 {
 }
 .text {
     font-family: 'Quicksand';
-    padding: 4rem
+    padding: 3rem;
+    font-size: 1.5rem;
+    color: #555
 }
 .navbtn:hover {
     color: #999
@@ -37,6 +39,18 @@ h1, h2, h3 {
 }
 .hide {
     display: none
+}
+#about {
+    background-color: #72A1A6
+}
+#forms {
+    background-color: #618C70
+}
+#collab {
+    background-color: #739F5E
+}
+#con {
+    background-color: #7DA66A
 }
 footer {
     height: 100%;
