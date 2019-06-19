@@ -1,0 +1,64 @@
+h1, h2, h3 {
+    font-family: 'Montserrat';
+}
+.full {
+    padding: 1rem;
+    position: relative
+}
+#intro {
+    background-image: url(lib/bg.JPG);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+#intro h1 {
+    font-family: 'Cutive Mono'
+}
+.navbar {
+    animation: 1s fromtop ease-out;
+    -webkit-animation: 1s fromtop ease-out;
+}
+.ferrybtn, .navbtn {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s ease-out;
+    padding: 1rem
+}
+.text {
+    font-family: 'Quicksand';
+    padding: 4rem
+}
+.navbtn:hover {
+    color: #999
+}
+.navbar-brand {
+    width: 5%;
+}
+.hide {
+    display: none
+}
+footer {
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+    border: 0;
+    border-top: 1px #efefef solid
+}
+
+@media screen and (max-width: 915px) {
+    .full {
+        height: 100%;
+    }
+}
+/* Color Theme Swatches in Hex */
+.lblue { color: #72A1A6; }
+.ulolive { color: #618C70; }
+.lolive { color: #739F5E; }
+.vlolive { color: #7DA66A; }
+
+/* Color Theme Swatches in RGBA */
+.favicon-1-rgba { color: rgba(114, 161, 166, 1); }
+.favicon-2-rgba { color: rgba(97, 140, 112, 1); }
+.favicon-3-rgba { color: rgba(115, 159, 94, 1); }
+.favicon-4-rgba { color: rgba(125, 166, 106, 1); }

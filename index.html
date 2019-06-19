@@ -7,8 +7,7 @@
         <meta name="application-name" content="Website">
         <meta name="author" content="Forbidden Verses">
         <meta name="description" content="Website for Forbidden Verses">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.css">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -20,10 +19,11 @@
         <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
         <link rel="stylesheet" href="https://yuvrajsharma07.github.io/Web_Development_Folder/templates/Libraries/ripple_effect_v0.3/ripple_effect_v0.3/ripple_effect.min.css">
         <link rel="stylesheet" href="https://YuvrajSharma07.github.io/Web_Development_Folder/templates/animate.css">
         <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="lib/favicon.png">
     </head>
     <body>
         <div class="loader" id="ldiv">
@@ -31,25 +31,81 @@
         </div>
         <div class="allmodals"></div>
         <div class="mainbod">
-            
-            <div id="fullpage">
-                <div class="section" data-anchor="intro">
-                    <div class="container text-center text-white">
-                        Forbidden Verses
+            <nav class="hide navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navp" aria-controls="navp" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand mt-auto" href="#"><img src="lib/logo_nobg.png" class="img-fluid"></a>
+                <div class="collapse navbar-collapse justify-content-end" id="navp">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="#">About</a>
+                        <a class="nav-item nav-link" href="#">Forms</a>
+                        <a class="nav-item nav-link" href="#">Collaborations</a>
+                        <a class="nav-item nav-link" href="#">Contact Us</a>
                     </div>
+                </div>
+            </nav>
+            <div class="container-fluid text-center text-white full" id="intro">
+                <h1 class="">Forbidden Verses</h1>
+                <span class="navbtn"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="container-fluid full" id="about">
+                <h1 class="text-center">more content</h1>
+                <p class="text container">some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. </p>
+            </div>
+            <div class="container-fluid full" id="forms">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="container">
+                            <h1 class="text-center">For Audiences</h1>
+                            <form class="container">
+                                <input type="text"><br>
+                                <input type="text"><br>
+                                <input type="submit">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container">
+                            <h1 class="text-center">For Participants</h1>
+                            <form class="container">
+                                <input type="text"><br>
+                                <input type="text"><br>
+                                <input type="submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid full" id="collab">
+                <h1 class="text-center">Our collaborations so far</h1>
+            </div>
+            <div class="container-fluid full" id="con">
+                <h1 class="text-center">Get in touch with us</h1>
+            </div>
+            <footer class="text-center">
+                Seems like you have reached the end! Don't worry, we will ferry ya to the top.<br><br>
+                <span class="ferrybtn"><i class="fas fa-chevron-up"></i></span><br><br>
+                &copy; Forbidden Verses <br><br>
+                Website developed by <a target="_blank" href="https://yuvrajsharma07.github.io">@yuvrajsharma</a>
+            </footer>
+            <!--<div id="fullpage">
+                <div class="section" data-anchor="intro">
                 </div>
                 <div class="section" data-anchor="about"></div>
                 <div class="section" data-anchor="work"></div>
                 <div class="section" data-anchor="con"></div>
-            </div>
+            </div>-->
         </div>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/vendors/scrolloverflow.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/vendors/scrolloverflow.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script src="https://yuvrajsharma07.github.io/Web_Development_Folder/templates/Libraries/ripple_effect_v0.3/ripple_effect_v0.3/ripple_effect.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.4.1/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script>
         <script src="index.js"></script>
     </body>
 </html>
