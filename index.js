@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 // loader
 
-$(window).on('load', function(){
+window.addEventListener('load', function(){
     $(".lds-ellipsis").fadeOut("slow");
     $(".loader").addClass("uprise");
     setTimeout(function(){
