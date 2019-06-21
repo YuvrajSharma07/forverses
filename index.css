@@ -14,6 +14,17 @@ input, label {
 button[type="submit"] {
     font-family: 'Montserrat'
 }
+b {
+    font-size: 1.3rem;
+    font-weight: 900
+}
+footer {
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+    border-top: 1px rgba(0,0,0,0.3) solid;
+    background-color: rgba(0,0,0,0.1);
+}
 .full {
     padding: 1rem;
     position: relative;
@@ -115,20 +126,8 @@ div.full:not(#intro) > h1, .container > h1 {
 #forms ul {
     font-family: 'Open Sans'
 }
-#forms .col-md-6 {
-    text-align: center;
-    padding: 5rem;
-}
-b {
-    font-size: 1.3rem;
-    font-weight: 900
-}
-footer {
-    height: 100%;
-    width: 100%;
-    padding: 4rem;
-    border-top: 1px rgba(0,0,0,0.3) solid;
-    background-color: rgba(0,0,0,0.1);
+#forms .col-md-12 {
+    padding: 2rem;
 }
 #timer {
     font-family: 'Comfortaa';

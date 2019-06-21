@@ -123,7 +123,7 @@ var x = setInterval(function() {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("timer").innerHTML = days + "D " + hours + "h " + minutes + "m " + seconds + "s " + "<br><br>" + countDownDate; 
+    document.getElementById("timer").innerHTML = days + "D " + hours + "h " + minutes + "m " + seconds + "s " + "<br><br>" + "<div class='text-right'>30<sup>th</sup> June @ 5 PM</div>"; 
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "Let's Roll ;)";
