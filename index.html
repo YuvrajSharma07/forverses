@@ -48,7 +48,106 @@
             </div>
             <div class="overlayer"></div>
         </div>
-        <div class="allmodals"></div>
+        <div class="allmodals">
+            <div class="modal fade" id="audi" tabindex="-1" role="dialog" aria-labelledby="Audience" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-white bg-info">
+                            <h3 class="modal-title ml-auto mr-auto" id="Audience">Audience</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="container">
+                                <div class="form-group">
+                                    <label for="name1">Your name</label>
+                                    <input type="text" class="form-control" id="name1" placeholder="Name" value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email1">Your email address</label>
+                                    <input type="email" class="form-control" id="email1" aria-describedby="info1" placeholder="Email" value="" required>
+                                    <small id="info1" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="numb1">Your phone number</label>
+                                    <input type="tel" class="form-control" id="numb1" aria-describedby="info2" placeholder="Phone number" value="" required>
+                                    <small id="info2" class="form-text text-muted">Don't worry, we have a strict no-spam policy</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="occu1">Your school/college</label>
+                                    <input type="text" class="form-control" id="occu1" aria-describedby="info3" placeholder="Occupation" value="" required>
+                                    <small id="info3" class="form-text text-muted">Or if you are working, please mention that.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="au">Tell us about yourself!</label>
+                                    <input type="text" class="form-control" id="au" value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="how1">How did you hear about us?</label>
+                                    <input type="text" class="form-control" id="how1" value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="link1">Link to your Facebook/Instagram</label>
+                                    <input type="url" class="form-control" id="link1" aria-describedby="info4" value="" required>
+                                    <small id="info4" class="form-text text-muted">Preferably Instagram.</small>
+                                </div>
+                                <button type="submit" class="ml-auto btn btn-outline-primary btn-lg">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="parti" tabindex="-1" role="dialog" aria-labelledby="Participant" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header text-white bg-info">
+                            <h3 class="modal-title ml-auto mr-auto" id="Participant">Participant</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="container">
+                                <div class="form-group">
+                                    <label for="name11">Your name</label>
+                                    <input type="text" class="form-control" id="name11" placeholder="Name" value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email11">Your email address</label>
+                                    <input type="email" class="form-control" id="email11" aria-describedby="info11" placeholder="Email" value="" required>
+                                    <small id="info11" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="numb11">Your phone number</label>
+                                    <input type="tel" class="form-control" id="numb11" aria-describedby="info21" placeholder="Phone number" value="" required>
+                                    <small id="info21" class="form-text text-muted">Don't worry, we have a strict no-spam policy</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="occu11">Your school/college</label>
+                                    <input type="text" class="form-control" id="occu11" aria-describedby="info31" placeholder="Occupation" value="" required>
+                                    <small id="info31" class="form-text text-muted">Or if you are working, please mention that.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="au1">Tell us about yourself!</label>
+                                    <input type="text" class="form-control" id="au1" value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="how11">How did you hear about us?</label>
+                                    <input type="text" class="form-control" id="how11" value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="link11">Link to your Facebook/Instagram</label>
+                                    <input type="url" class="form-control" id="link11" aria-describedby="info41" value="" required>
+                                    <small id="info41" class="form-text text-muted">Preferably Instagram.</small>
+                                </div>
+                                <button type="submit" class="ml-auto btn btn-outline-primary btn-lg">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="hide mainbod">
             <nav class="hide navbar navbar-toggleable-md navbar-inverse fixed-top">
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navp" aria-controls="navp" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,9 +170,6 @@
                                 <a class="nav-link gala" href="#gal">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link cola" href="#collab">Collaborations</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link cona" href="#con">Contact Us</a>
                             </li>
                         </ul>
@@ -85,49 +181,41 @@
                 <span class="navbtn"><i class="fas fa-chevron-down"></i></span>
             </div>
             <div class="container-fluid full" id="about">
+                <div class="banner"></div>
                 <h1 class="text-center text-white">About us</h1>
                 <p class="text container">some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. some random text to act as filler. </p>
             </div>
             <div class="container-fluid full" id="forms">
+                <div class="banner"></div>
                 <div class="container">
-                    <h1 class="text-center text-white">New events</h1>
+                    <h1 class="text-center text-white">Upcoming events</h1>
                     <br>
                     <div class="container-fluid text-white text-center" id="timer"></div>
                 </div>
                 <div class="row">
+                    <div class="col-md-12" style="padding: 2rem">
+                        <h3 class="text-center">Some general guidelines</h3>
+                        <ul class="container">
+                            <li>Each performer will be given maximum <b>5 minutes</b></li>
+                            <li>You're allowed to read works by different writers and share your stories but due credit should be given to the original artist. </li>
+                            <li>There are no boundaries to literature and hence we don't want to keep any too.</li>
+                            <li>We have <b>1 mic</b> (with stand) and <b>2 amplifiers</b>. If you require anything else please inform us.</li>
+                            <li>The event will only be a success with your co-operation. Please feel free to connect with us for any query that you have. </li>
+                            <li>An Entry fee of <i class="fas fa-rupee-sign" style="font-size: 1.2rem"></i> <b>50</b> has to be paid at the venue on the day of the event. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-md-6">
-                        <div class="container">
-                            <h1 class="text-center text-white">For Audiences</h1>
-                            <form class="container">
-                                <input type="text"><br>
-                                <input type="text"><br>
-                                <input type="text"><br>
-                                <input type="text"><br>
-                                <input type="text"><br>
-                                <input type="submit">
-                            </form>
-                        </div>
+                        <button class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#audi">Audience</button>
                     </div>
                     <div class="col-md-6">
-                        <div class="container">
-                            <h1 class="text-center text-white">For Participants</h1>
-                            <form class="container">
-                                <input type="text"><br>
-                                <input type="text"><br>
-                                <input type="text"><br>
-                                <input type="text"><br>
-                                <input type="text"><br>
-                                <input type="submit">
-                            </form>
-                        </div>
+                        <button class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#parti">Participant</button>
                     </div>
                 </div>
             </div>
             <div class="container-fluid full" id="gal">
                 <h1 class="text-center text-white">Gallery</h1>
-            </div>
-            <div class="container-fluid full" id="collab">
-                <h1 class="text-center text-white">Our collaborations so far</h1>
             </div>
             <div class="container-fluid full" id="con">
                 <h1 class="text-center text-white">Get in touch with us</h1>
@@ -138,18 +226,9 @@
                 &copy; Forbidden Verses <br><br>
                 Website developed by <a target="_blank" href="https://yuvrajsharma07.github.io">@yuvrajsharma</a>
             </footer>
-            <!--<div id="fullpage">
-                <div class="section" data-anchor="intro">
-                </div>
-                <div class="section" data-anchor="about"></div>
-                <div class="section" data-anchor="work"></div>
-                <div class="section" data-anchor="con"></div>
-            </div>-->
         </div>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/vendors/scrolloverflow.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <script src="https://yuvrajsharma07.github.io/Web_Development_Folder/templates/Libraries/ripple_effect_v0.3/ripple_effect_v0.3/ripple_effect.min.js"></script>

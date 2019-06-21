@@ -42,11 +42,6 @@ $(document).on('scroll', function() {
     }
 });
 $(document).on('scroll', function() {
-    if( $(this).scrollTop() >= $('#collab').position().top ){
-        $(".navbar").css({"background-color": "rgba(115, 159, 94, .4)"});
-    }
-});
-$(document).on('scroll', function() {
     if( $(this).scrollTop() >= $('#con').position().top ){
         $(".navbar").css({"background-color": "rgba(125, 166, 106, .4)"});
     }
@@ -97,13 +92,6 @@ $(document).ready(function (){
     });
 });
 $(document).ready(function (){
-    $(".cola").click(function (){
-        $('html, body').animate({
-            scrollTop: $("#collab").offset().top
-        }, 1000);
-    });
-});
-$(document).ready(function (){
     $(".cona").click(function (){
         $('html, body').animate({
             scrollTop: $("#con").offset().top
@@ -140,4 +128,10 @@ var x = setInterval(function() {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "Let's Roll ;)";
     }
+}, 1000);
+setInterval(function(){
+    $("#timer").css('background-color', 'rgba(0, 0, 0, .3)');
+    setTimeout(function(){
+        $("#timer").css('background-color', 'rgba(0, 0, 0, .2)');
+    }, 500)
 }, 1000);

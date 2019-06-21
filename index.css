@@ -8,6 +8,12 @@ button {
     outline: none !important;
     cursor: pointer
 }
+input, label {
+    font-family: 'Quicksand'
+}
+button[type="submit"] {
+    font-family: 'Montserrat'
+}
 .full {
     padding: 1rem;
     position: relative;
@@ -15,7 +21,8 @@ button {
 }
 .loader {
     background-color: #333;
-    padding: 0
+    padding: 0;
+    overflow: hidden
 }
 .mainbod {
     animation: 2s fadein ease-out;
@@ -27,7 +34,7 @@ button {
     height: 100%;
     background-color: #fff;
     top: 100%;
-    position: absolute
+    position: absolute;
 }
 .uprise .overlayer {
     animation: 1s overlay ease-out;
@@ -105,21 +112,35 @@ div.full:not(#intro) > h1, .container > h1 {
 #con {
     background-color: #7DA66A
 }
+#forms ul {
+    font-family: 'Open Sans'
+}
+#forms .col-md-6 {
+    text-align: center;
+    padding: 5rem;
+}
+b {
+    font-size: 1.3rem;
+    font-weight: 900
+}
 footer {
     height: 100%;
     width: 100%;
     padding: 4rem;
-    border: 0;
-    border-top: 1px #efefef solid
+    border-top: 1px rgba(0,0,0,0.3) solid;
+    background-color: rgba(0,0,0,0.1);
 }
 #timer {
     font-family: 'Comfortaa';
     letter-spacing: 2px;
-    background-color: rgba(0,0,0,0.3);
     padding: 2rem;
-    font-size: 2rem
+    font-size: 2rem;
+    transition: .4s ease-out
 }
-
+.banner {
+    background-color: rgba(0,0,0,0);
+    height: 100%
+}
 .lds-ellipsis {
     position: relative;
 }
