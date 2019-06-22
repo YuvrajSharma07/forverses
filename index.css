@@ -8,11 +8,8 @@ button {
     outline: none !important;
     cursor: pointer
 }
-input, label {
+input, label, button[type="submit"] {
     font-family: 'Quicksand'
-}
-button[type="submit"] {
-    font-family: 'Montserrat'
 }
 b {
     font-size: 1.3rem;
@@ -71,8 +68,21 @@ div.full:not(#intro) > h1, .container > h1 {
     font-family: 'Cutive Mono';
     border-bottom: 1px solid rgba(0,0,0,0.06)
 }
+.d-flex button {
+    font-family: 'Cutive Mono'
+}
+.modal-header {
+    background-color: #008080
+}
+.modal-header h3 {
+    font-family: 'Quicksand'
+}
+.btn-outline-light:hover {
+    color: #555 !important
+}
 .active {
     background-color: rgba(0,0,0,0.2) !important;
+    
 }
 .navbar a {
     cursor: pointer !important;
@@ -97,7 +107,7 @@ div.full:not(#intro) > h1, .container > h1 {
     font-family: 'Quicksand';
     padding: 3rem;
     font-size: 1.5rem;
-    color: #333
+    color: rgba(255,255,255,0.8)
 }
 .navbtn:hover {
     color: #999
@@ -129,6 +139,9 @@ div.full:not(#intro) > h1, .container > h1 {
 #forms .col-md-12 {
     padding: 2rem;
 }
+.close {
+    margin-left: 0 !important
+}
 #timer, .date {
     font-family: 'Comfortaa';
     letter-spacing: 2px;
@@ -138,8 +151,89 @@ div.full:not(#intro) > h1, .container > h1 {
 }
 .banner {
     background-color: rgba(0,0,0,0);
-    height: 100%
+    height: 3rem;
 }
+.team .col-lg-4 {
+    padding: 2rem
+}
+.team .col-lg-4, .team .col-lg-3 {
+	transition: .4s ease-out;
+	cursor: default;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.team h1 {
+    font-size: 2rem
+}
+.team h2 {
+    font-size: 1.5rem
+}
+/*
+.team .col-md-4:hover {
+	color: #000
+}
+.team .col-md-4:focus {
+	background-color: rgba(255, 255, 255, 0.9)
+}
+.team .col-md-4:before {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+	transition: 0.2s ease-in;
+    -webkit-transition: 0.2s ease-in;
+}
+.team .col-md-4:hover:before {
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0
+}
+*/
+.imgcontainer {
+    position: relative;
+    width: 100%;
+    border-radius: 100%;
+    cursor: pointer
+}
+.imgoverlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.3);
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+    border-radius: 100%
+}
+.imgcontainer:hover .imgoverlay {
+    bottom: 0;
+    height: 100%;
+}
+.imgtext {
+    white-space: nowrap; 
+    color: #fff;
+    font-size: 1rem;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-family: 'Quicksand'
+}
+a.text-white-50 {
+    text-decoration: underline
+}
+
+/*loader*/
 .lds-ellipsis {
     position: relative;
 }
