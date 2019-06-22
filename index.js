@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 // loader
 
-window.addEventListener('load', function(){
+$(window).ready(function(){
     $(".lds-ellipsis").fadeOut("slow");
     $(".loader").addClass("uprise");
     setTimeout(function(){
@@ -111,6 +111,8 @@ $(document).ready(function(){
     if($(window).width() < 1000) {
         $("#timer").css({"width": "100%"});
         $(".nav").addClass("flex-column");
+        $(".date").removeClass("text-right");
+        $(".date").addClass("text-center");
     }
 });
 
@@ -123,7 +125,7 @@ var x = setInterval(function() {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("timer").innerHTML = days + "D " + hours + "h " + minutes + "m " + seconds + "s " + "<br><br>" + "<div class='text-right'>30<sup>th</sup> June @ 5 PM</div>"; 
+    document.getElementById("timer").innerHTML = days + " D " + hours + " h " + minutes + " m " + seconds + " s "; 
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "Let's Roll ;)";

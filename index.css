@@ -129,7 +129,7 @@ div.full:not(#intro) > h1, .container > h1 {
 #forms .col-md-12 {
     padding: 2rem;
 }
-#timer {
+#timer, .date {
     font-family: 'Comfortaa';
     letter-spacing: 2px;
     padding: 2rem;
