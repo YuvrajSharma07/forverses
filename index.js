@@ -10,6 +10,23 @@ $(document).ready(function() {
 	});
 });*/
 
+// height - width index
+
+var vHeight = $(window).height(), vWidth = $(window).width(), cover = $('.full'), halfvh = vHeight/2, thirdvh = vHeight/3, halfvw = vWidth/2.5;
+$('#intro').css({"padding-top": halfvh,});
+$('#ldiv').css({"padding-top": halfvh,});
+$('.lds-css').css({"padding-left": halfvw,});
+$("#timer").css({"width": vWidth/2});
+cover.css({"min-height":vHeight,"max-width":vWidth,});
+$(document).ready(function(){
+    if($(window).width() < 1000) {
+        $("#timer").css({"width": "100%"});
+        $(".nav").addClass("flex-column");
+        $(".date").removeClass("text-right");
+        $(".date").addClass("text-center");
+    }
+});
+
 // loader
 
 $(window).ready(function(){
@@ -24,11 +41,15 @@ $(window).ready(function(){
 // section scroll functions
 
 $(document).on('scroll', function() {
-    if( $(this).scrollTop() >= $('#about').position().top ){
+    if($(this).scrollTop() >= $(".navbtn").position().top){
         $(".navbar").removeClass("hide");
-        $(".navbar").css({"background-color": "rgba(114, 161, 166, .4)"});
     } else {
         $(".navbar").addClass("hide");
+    }
+});
+$(document).on('scroll', function() {
+    if( $(this).scrollTop() >= $('#about').position().top ){
+        $(".navbar").css({"background-color": "rgba(114, 161, 166, .4)"});
     }
 });
 $(document).on('scroll', function() {
@@ -48,9 +69,12 @@ $(document).on('scroll', function() {
 });
 
 /// intro animations
-$(document).scroll(function(){
-    var gcale = 70;
-    $("#intro").css({"filter": gscale+=1})
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        var i = 0;
+        i += $(window).scrollTop() / 2;
+        $(".introheading").css({"transform": "translateY("+ i +"px)", "opacity": 1 - $(window).scrollTop() / 1000});
+    })
 });
 /// end
 
@@ -104,23 +128,6 @@ $(document).ready(function (){
             scrollTop: $("#con").offset().top
         }, 1000);
     });
-});
-
-// height - width index
-
-var vHeight = $(window).height(), vWidth = $(window).width(), cover = $('.full'), halfvh = vHeight/2, thirdvh = vHeight/3, halfvw = vWidth/2.5;
-$('#intro').css({"padding-top": halfvh,});
-$('#ldiv').css({"padding-top": halfvh,});
-$('.lds-css').css({"padding-left": halfvw,});
-$("#timer").css({"width": vWidth/2});
-cover.css({"min-height":vHeight,"max-width":vWidth,});
-$(document).ready(function(){
-    if($(window).width() < 1000) {
-        $("#timer").css({"width": "100%"});
-        $(".nav").addClass("flex-column");
-        $(".date").removeClass("text-right");
-        $(".date").addClass("text-center");
-    }
 });
 
 // countdown 
