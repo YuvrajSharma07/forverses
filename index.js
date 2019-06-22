@@ -47,6 +47,13 @@ $(document).on('scroll', function() {
     }
 });
 
+/// intro animations
+$(document).scroll(function(){
+    var gcale = 70;
+    $("#intro").css({"filter": gscale+=1})
+});
+/// end
+
 // smooth scroll
 
 $(document).ready(function (){
