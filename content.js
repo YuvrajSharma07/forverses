@@ -9,3 +9,7 @@
 // Hi, I’m Vaibhav Sabharwal.I handle finance and logistics for forverses .I’m a Bcom hons student and feel that poetry and music really complete me. Follow me on insta to see random write ups based on my life.
 
 // Hey, I'm Chetna, an artist (maybe). Stories are what inspires me to create something and I believe everything and everyone has a story of their own.
+
+// https://www.facebook.com/forverses/
+
+// https://www.instagram.com/forverses/

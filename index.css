@@ -69,7 +69,6 @@ div.full:not(#intro) > h1, .container > h1 {
     -webkit-animation: .5s fromtop ease-out;
     transition: .4s ease-out;
     font-family: 'Cutive Mono';
-    background-color: rgba(0,0,0,0.4);
     border-bottom: 1px solid rgba(0,0,0,0.06)
 }
 .d-flex button {
@@ -235,6 +234,19 @@ div.full:not(#intro) > h1, .container > h1 {
 }
 a.text-white-50 {
     text-decoration: underline
+}
+#con .d-flex a {
+    transition: .3s ease-out;
+    font-size: 3rem
+}
+.fa-instagram:hover {
+    color: #fd5949;
+}
+.fa-facebook-square:hover {
+    color: #4267b2;
+}
+.fa-envelope-open-text:hover {
+    color: #000
 }
 
 /*loader*/

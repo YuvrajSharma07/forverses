@@ -41,8 +41,9 @@ $(window).ready(function(){
 // section scroll functions
 
 $(document).on('scroll', function() {
-    if($(this).scrollTop() >= $(".navbtn").position().top){
+    if($(this).scrollTop() >= halfvh){
         $(".navbar").removeClass("hide");
+        $(".navbar").css({"background-color": "rgba(0,0,0,0.4)"})
     } else {
         $(".navbar").addClass("hide");
     }
