@@ -108,8 +108,7 @@ div.full:not(#intro) > h1, .container > h1 {
 }
 .text {
     font-family: 'Quicksand';
-    padding: 3rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: rgba(255,255,255,0.8)
 }
 .navbtn:hover {
@@ -239,14 +238,22 @@ a.text-white-50 {
     transition: .3s ease-out;
     font-size: 3rem
 }
-.fa-instagram:hover {
-    color: #fd5949;
+#con .d-flex a:nth-of-type(1):hover {
+    color: #4267b2 !important;
 }
-.fa-facebook-square:hover {
-    color: #4267b2;
+#con .d-flex a:nth-of-type(2):hover {
+    color: #fd5949 !important;
 }
-.fa-envelope-open-text:hover {
-    color: #000
+#con .d-flex a:nth-of-type(3):hover {
+    color: #000 !important
+}
+.team h1.ml-auto.mr-auto {
+    border-bottom: 1px solid rgba(255,255,255,.85);
+    width: max-content;
+    padding-bottom: 1rem
+}
+#con hr {
+    width: 40%
 }
 
 /*loader*/

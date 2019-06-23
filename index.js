@@ -43,7 +43,7 @@ $(window).ready(function(){
 $(document).on('scroll', function() {
     if($(this).scrollTop() >= halfvh){
         $(".navbar").removeClass("hide");
-        $(".navbar").css({"background-color": "rgba(0,0,0,0.4)"})
+        $(".navbar").css({"background-color": "rgba(0,0,0,0.3)"})
     } else {
         $(".navbar").addClass("hide");
     }
