@@ -13,7 +13,7 @@ $(document).ready(function() {
 // height - width index
 
 var vHeight = $(window).height(), vWidth = $(window).width(), cover = $('.full'), halfvh = vHeight/2, thirdvh = vHeight/3, halfvw = vWidth/2.5;
-$('#intro').css({"padding-top": halfvh,});
+$('.introheading').css({"padding-top": halfvh,});
 $('#ldiv').css({"padding-top": halfvh,});
 $('.lds-css').css({"padding-left": halfvw,});
 $("#timer").css({"width": vWidth/2});
@@ -43,7 +43,8 @@ $(window).ready(function(){
 $(document).on('scroll', function() {
     if($(this).scrollTop() >= halfvh){
         $(".navbar").removeClass("hide");
-        $(".navbar").css({"background-color": "rgba(0,0,0,0.3)"})
+        $(".navbar").css({"background-color": "rgba(0,0,0,0.3)"});
+        $(".navbar .inta").addClass("active");
     } else {
         $(".navbar").addClass("hide");
     }
@@ -51,6 +52,7 @@ $(document).on('scroll', function() {
 $(document).on('scroll', function() {
     if( $(this).scrollTop() >= $('#about').position().top ){
         $(".navbar").css({"background-color": "rgba(114, 161, 166, .4)"});
+        $(".navbar .inta").removeClass("active");
     }
 });
 $(document).on('scroll', function() {
@@ -140,7 +142,7 @@ var x = setInterval(function() {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("timer").innerHTML = days + " D " + hours + " h " + minutes + " m " + seconds + " s "; 
+    document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s "; 
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "Let's Roll ;)";

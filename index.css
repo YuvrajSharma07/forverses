@@ -56,10 +56,13 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     transition: .4s ease-out;
-    filter: grayscale(70%)
+    filter: grayscale(100%)
 }
 #intro h1 {
-    font-family: 'Cutive Mono'
+    font-family: 'Cutive Mono';
+}
+#intro .introheading {
+    background-color: rgba(0,0,0,0.4)
 }
 div.full:not(#intro) > h1, .container > h1 {
     padding-top: 3rem
