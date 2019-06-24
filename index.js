@@ -32,7 +32,7 @@ $(document).on('scroll', function() {
     if($(this).scrollTop() >= halfvh){
         $(".navbar").removeClass("hide");
         $(".navbar").css({"background-color": "rgba(0,0,0,0.3)"});
-        $(".navbar .inta").addClass("active");
+        $(".navbar a.nav-link.inta").addClass("active");
     } else {
         $(".navbar").addClass("hide");
     }
