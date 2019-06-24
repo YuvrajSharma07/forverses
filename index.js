@@ -1,14 +1,11 @@
-/*var x = document.getElementById("navb");
-$(document).ready(function() {
-	$('#fullpage').fullpage({
-        menu: '#navb',
-        scrollOverflow: true,
-        recordHistory: false,
-        sectionsColor: ['#1D1F1D', '#101A26', '#18272B', '#222'],
-        afterRender: 
-        },
-	});
-});*/
+ $(document).ready(function(){
+         $(".lds-ellipsis").fadeOut("slow");
+         $(".loader").addClass("uprise");
+         setTimeout(function(){
+             $(".mainbod").removeClass("hide");
+             $(".loader").addClass("hide");
+         }, 1000);
+ });
 
 // height - width index
 
@@ -28,15 +25,6 @@ $(document).ready(function(){
 });
 
 // loader
-
-$(window).ready(function(){
-    $(".lds-ellipsis").fadeOut("slow");
-    $(".loader").addClass("uprise");
-    setTimeout(function(){
-        $(".mainbod").removeClass("hide");
-        $(".loader").addClass("hide");
-    }, 1000);
-});
 
 // section scroll functions
 
