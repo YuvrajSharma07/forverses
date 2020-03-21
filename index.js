@@ -1,11 +1,11 @@
- $(document).ready(function(){
-         $(".lds-ellipsis").fadeOut("slow");
-         $(".loader").addClass("uprise");
-         setTimeout(function(){
-             $(".mainbod").removeClass("hide");
-             $(".loader").addClass("hide");
-         }, 1000);
- });
+window.onload = function(){
+    $(".lds-ellipsis").fadeOut("slow");
+    $(".loader").addClass("uprise");
+    setTimeout(function(){
+        $(".mainbod").removeClass("hide");
+        $(".loader").addClass("hide");
+    }, 1000);
+};
 
 // height - width index
 
@@ -130,15 +130,13 @@ var x = setInterval(function() {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s "; 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("timer").innerHTML = "Let's Roll ;)";
-    }
-}, 1000);
-setInterval(function(){
+    document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
     $("#timer").css('background-color', 'rgba(0, 0, 0, .3)');
     setTimeout(function(){
         $("#timer").css('background-color', 'rgba(0, 0, 0, .2)');
     }, 500)
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "Let's Roll ;)";
+    }
 }, 1000);
