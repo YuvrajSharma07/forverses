@@ -120,25 +120,25 @@ div.full:not(#intro) > h1, .container > h1 {
 .hide {
     display: none
 }
-#about {
+#home {
     background-color: #72A1A6
 }
-#forms {
+#jour {
     background-color: #618C70
 }
-#gal {
+#sub {
     background-color: #558286
 }
-#collab {
+#about {
     background-color: #739F5E
 }
 #con {
     background-color: #7DA66A
 }
-#forms ul {
+#events ul {
     font-family: 'Open Sans'
 }
-#forms .col-md-12 {
+#events .col-md-12 {
     padding: 2rem;
 }
 .close {
@@ -232,6 +232,14 @@ a.text-white-50 {
 }
 #con hr {
     width: 40%
+}
+#sub form {
+    padding: 2rem
+}
+#sub form fieldset {
+    border: 1px solid #ddd;
+    padding: 2rem
+
 }
 
 /*loader*/

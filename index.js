@@ -37,34 +37,16 @@ $(document).on('scroll', function() {
         $(".navbar").addClass("hide");
     }
 });
-$(document).on('scroll', function() {
-    if( $(this).scrollTop() >= $('#about').position().top ){
-        $(".navbar").css({"background-color": "rgba(114, 161, 166, .4)"});
-        $(".navbar .inta").removeClass("active");
-    }
-});
-$(document).on('scroll', function() {
-    if( $(this).scrollTop() >= $('#forms').position().top ){
-        $(".navbar").css({"background-color": "rgba(97, 140, 112, .4)"});
-    }
-});
-$(document).on('scroll', function() {
-    if( $(this).scrollTop() >= $('#gal').position().top ){
-        $(".navbar").css({"background-color": "rgba(85, 130, 134, .4)"});
-    }
-});
-$(document).on('scroll', function() {
-    if( $(this).scrollTop() >= $('#con').position().top ){
-        $(".navbar").css({"background-color": "rgba(125, 166, 106, .4)"});
-    }
-});
 
 /// intro animations
 $(document).ready(function(){ 
     $(window).scroll(function(){ 
-        var i = 0;
-        i += $(window).scrollTop() / 2;
-        $(".introheading").css({"transform": "translateY("+ i +"px)", "opacity": 1 - $(window).scrollTop() / 1000});
+        var i = $(window).scrollTop();
+        if(i<=600){
+            $(".introheading").css({"transform": "translateY("+ i/2 +"px)", "opacity": 1 - i/1000});
+        } else {
+            $(".introheading").css({"transform": "translateY(600px)", "opacity": 1-i});
+        }
     })
 });
 /// end
@@ -74,7 +56,7 @@ $(document).ready(function(){
 $(document).ready(function (){
     $(".navbtn").click(function (){
         $('html, body').animate({
-            scrollTop: $("#about").offset().top
+            scrollTop: $("#home").offset().top
         }, 1000);
     });
 });
@@ -93,16 +75,16 @@ $(document).ready(function (){
     });
 });
 $(document).ready(function (){
-    $(".aboa").click(function (){
+    $(".homa").click(function (){
         $('html, body').animate({
-            scrollTop: $("#about").offset().top
+            scrollTop: $("#home").offset().top
         }, 1000);
     });
 });
 $(document).ready(function (){
-    $(".fora").click(function (){
+    $(".evea").click(function (){
         $('html, body').animate({
-            scrollTop: $("#forms").offset().top
+            scrollTop: $("#events").offset().top
         }, 1000);
     });
 });
@@ -122,7 +104,7 @@ $(document).ready(function (){
 });
 
 // countdown 
-var countDownDate = new Date("Jun 30, 2019 17:00:00");
+var countDownDate = new Date("Jun 30, 2020 17:00:00");
 var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
