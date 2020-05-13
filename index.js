@@ -23,21 +23,6 @@ $(document).ready(function(){
         $(".date").addClass("text-center");
     }
 });
-
-// loader
-
-// section scroll functions
-
-$(document).on('scroll', function() {
-    if($(this).scrollTop() >= halfvh){
-        $(".navbar").removeClass("hide");
-        $(".navbar").css({"background-color": "rgba(0,0,0,0.3)"});
-        $(".navbar a.nav-link.inta").addClass("active");
-    } else {
-        $(".navbar").addClass("hide");
-    }
-});
-
 /// intro animations
 $(document).ready(function(){ 
     $(window).scroll(function(){ 
@@ -49,10 +34,7 @@ $(document).ready(function(){
         }
     })
 });
-/// end
-
 // smooth scroll
-
 $(document).ready(function (){
     $(".navbtn").click(function (){
         $('html, body').animate({
@@ -67,42 +49,14 @@ $(document).ready(function (){
         }, 1000);
     });
 });
-$(document).ready(function (){
-    $(".inta").click(function (){
-        $('html, body').animate({
-            scrollTop: $("#intro").offset().top
+$('.nav-link').each(function(){
+    $(this).click(function(){
+        $(this).tab("show");
+        $('html, body').delay(400).animate({
+            scrollTop: $($(this).attr("href")).offset().top
         }, 1000);
-    });
+    })
 });
-$(document).ready(function (){
-    $(".homa").click(function (){
-        $('html, body').animate({
-            scrollTop: $("#home").offset().top
-        }, 1000);
-    });
-});
-$(document).ready(function (){
-    $(".evea").click(function (){
-        $('html, body').animate({
-            scrollTop: $("#events").offset().top
-        }, 1000);
-    });
-});
-$(document).ready(function (){
-    $(".gala").click(function (){
-        $('html, body').animate({
-            scrollTop: $("#gal").offset().top
-        }, 1000);
-    });
-});
-$(document).ready(function (){
-    $(".cona").click(function (){
-        $('html, body').animate({
-            scrollTop: $("#con").offset().top
-        }, 1000);
-    });
-});
-
 // countdown 
 var countDownDate = new Date("Jun 30, 2020 17:00:00");
 var x = setInterval(function() {

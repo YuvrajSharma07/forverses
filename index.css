@@ -65,6 +65,7 @@ div.full:not(#intro) > h1, .container > h1 {
     padding-top: 3rem
 }
 .navbar {
+    background-color: rgba(0,0,0,0.3);
     animation: .5s fromtop ease-out;
     -webkit-animation: .5s fromtop ease-out;
     transition: .4s ease-out;
@@ -83,7 +84,7 @@ div.full:not(#intro) > h1, .container > h1 {
 .btn-outline-light:hover {
     color: #555 !important
 }
-.active {
+a.active {
     background-color: rgba(0,0,0,0.2) !important;
     
 }
