@@ -1,0 +1,20 @@
+header {
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Open sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open sans', sans-serif;
+    text-align: center
+}
+.list-group-item.active, .list-group-item {
+    border-color: rgba(0,0,0,0.2)
+}
+.list-group {
+    position: fixed;
+}
+@media only screen and (max-width: 800px) {
+    .list-group {
+        position: relative
+    }
+}

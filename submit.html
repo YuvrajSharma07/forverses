@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="author" content="Forbidden Verses">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Forbidden Verses | Submit an entry</title>
+        <link rel="shortcut icon" href="lib/logo.png" type="image/x-icon">
+        <link rel="apple-touch-icon" href="lib/logo.png">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://YuvrajSharma07.github.io/Web_Development_Folder/templates/animate.css">
+        <link rel="stylesheet" href="lib/index.css">
+    </head>
+    <body class="full">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top text-center">
+            <button class="navbar-toggler my-1" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-center" id="mainNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="journal.html">Marketplace</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="submit.html">Submissions <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main class="container">
+            <div class="p-5">
+                <h1 class="text-center py-5 display-4">Submit an entry</h1>
+                <h1 class="p-3">Guidelines:</h1>
+                <p class="lead">
+                    We accept submissions monthly in a window between the 10<sup>th</sup> and 30<sup>th</sup> of the month. Our unsolicited submissions are themeless and you can submit any pieces which fit the description below. If we are accepting only themed submissions in the current month, you will find the information below. We are currently a very small organization, therefore are not in a position to pay you. However, with your continuous support, we hope we can rectify this and pay our contributors soon.
+                </p>
+                <p class="lead">Please adhere to the following guidelines:</p>
+                <ul class="lead">
+                    <li>Please send your entries to <a href="mailto: fvsubmission@gmail.com">fvsubmission@gmail.com</a> with the subject line “Type of Submission - Your Name - Month of Submission”.<br>For instance, you are submitting a poem for the October Issue, please mention “Poetry Submission - XYZ - October”</li>
+                    <li>We are currently accepting artworks in the following categories - </li>
+                    <ol>
+                        <li>Visual Art ( Digital / page illustrations )</li>
+                        <li>Photography</li>
+                        <li>Poetry</li>
+                        <li>Cartoons ( we appreciate political humour )</li>
+                    </ol>
+                    <li>We only accept submissions in English and Hindi/Hindustani. Please ensure submissions are in a readable font and for Hindi submission submit in Devnagri script.</li>
+                    <li>Please restrict yourself to one submission per month only. Each submission is restricted to a maximum of two poems and three photographs, illustrations or cartoons. Multiple submissions will be left unread.</li>
+                    <li>Upload any poems in the form of a Word Document or PDF and any images as a PNG/JPG attachment. Put all poems in one document, and start each on a new page. Please title your works, regardless of the type of submission.</li>
+                    <li>We prefer previously unpublished pieces however are happy to review even previously published ones. If your piece has been published elsewhere please let us in the body of the email.</li>
+                    <li>Send only complete, fully proofread work. We will not consider revisions apart from formatting and basic editing, this is too difficult administratively for our small staff.</li>
+                </ul>
+            </div>
+            <form id="submissions_form" class="bg-prime-1 pt-4 pb-3 px-3 container my-3" enctype="multipart/form-data">
+                <fieldset class="border border-light p-4">
+                    <legend class="text-center px-3 h1" style="width: auto">Submission portal</legend>
+                    <div class="form-group">
+                        <label class="h3 p-2" for="name">Your name</label>
+                        <input class="form-control" name="name" type="text" id="name" placeholder="Type your name here..." required>
+                    </div>
+                    <div class="form-group">
+                        <label class="h3 p-2" for="email">Your email ID</label>
+                        <input class="form-control" name="email" type="email" id="email" placeholder="Type your email here..." required>
+                    </div>
+                    <div class="form-group">
+                        <h3 class="p-2">Submission category</h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sub_type" id="radio1" value="Visual Art">
+                            <label class="form-check-label" for="radio1">Visual Art</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sub_type" id="radio2" value="Photography">
+                            <label class="form-check-label" for="radio2">Photography</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sub_type" id="radio3" value="Poetry">
+                            <label class="form-check-label" for="radio3">Poetry</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="h3 p-2" for="attachment">Upload attachment</label>
+                        <input type="file" class="form-control-file d-none" name="attachment" id="attachment">
+                        <button class="w-100 p-5 custom-upload" type="button"><i class="fa fa-upload"></i> Upload</button>
+                    </div>
+                    <input class="d-none" name="file_location" readonly>
+                    <button class="btn btn-outline-light btn-lg btn-block mt-5" id="submit" type="submit" value="submit">Submit</button>
+                </fieldset>
+            </form>
+        </main>
+        <footer class="p-5 text-center">
+            <p>Website developed by <a class="text-primary" href="https://yuvrajsharma07.github.io">Yuvraj Sharma</a></p>
+            <span class="w-100 text-center"></span>
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="lib/index.js"></script>
+    </body>
+</html>
