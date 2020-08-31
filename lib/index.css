@@ -1,3 +1,6 @@
+@import url('fonts.css');
+@import url('font_var.css');
+@import url('colors.css');
 button,
 a,
 input {
@@ -26,24 +29,14 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-.display-1,
-.display-2,
-.display-3,
-.display-4 {
-    font-family: 'Oswald', sans-serif !important
+h6 {
+    font-family: var(--primary-font);
 }
 
 .lead,
 p,
 div {
-    font-family: 'Work Sans'
+    font-family: var(--secondary-font);
 }
 
 input,
@@ -51,7 +44,7 @@ button,
 textarea,
 label,
 .btn {
-    font-family: 'Open Sans', sans-serif
+    font-family: var(--complementary-font);
 }
 
 .navbar {
@@ -154,10 +147,11 @@ label,
 .strip-design {
     background-image: linear-gradient(175deg, rgba(0,0,0,0) 94.9%, #82bdbf 95%),
         linear-gradient(100deg, rgba(0,0,0,0) 94.9%, #82bdbf 95%),
-        linear-gradient(175deg, rgba(0,0,0,0) 79.9%, #157072 80%),
-        linear-gradient(100deg, rgba(0,0,0,0) 85.9%, #157072 86%),
+        linear-gradient(175deg, rgba(0,0,0,0) 84.9%, #157072 85%),
+        linear-gradient(100deg, rgba(0,0,0,0) 89.9%, #157072 90%),
         linear-gradient(175deg, rgba(0,0,0,0) 80%, #084d4f 80%),
-        linear-gradient(100deg, rgba(0,0,0,0) 79.9%, #084d4f 80%);
+        linear-gradient(100deg, rgba(0,0,0,0) 86.9%, #084d4f 87%);
+    padding-bottom: 6rem !important
 }
 .strip-design-inverse {
     background-image: linear-gradient(-9deg, rgba(0, 0, 0, 0) 83.9%, #82bdbf 84%),
@@ -176,5 +170,11 @@ label,
 @media only screen and (max-width: 550px) {
     .py-5x {
         padding: 3rem !important
+    }
+    #journal_intro h1 {
+        font-size: 2.5rem
+    }
+    #journal_intro h1 span {
+        font-size: 2rem
     }
 }

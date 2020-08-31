@@ -1,9 +1,6 @@
 <?php
-$db_connection = mysqli_connect("localhost", "forverses", "forverses", "forverses");
-if(!$db_connection) {
-    die("Can't connect: ".mysqli_connect_error());
-}
-
+include('header.php');
+$db_connection = dbConnect("forverses");
 if (isset($_POST["categ"])){
     $sql_query = "SELECT * FROM submissions WHERE submission_type='".$_POST["categ"]."'";
 } else {

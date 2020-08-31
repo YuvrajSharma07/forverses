@@ -7,14 +7,32 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Open sans', sans-serif;
     text-align: center
 }
+a, button {
+    cursor: pointer
+}
 .list-group-item.active, .list-group-item {
     border-color: rgba(0,0,0,0.2)
 }
 .list-group {
     position: fixed;
 }
+.team_members .card {
+    width: 40%
+}
+.delete-user:hover::after {
+    content: ' Delete this member';
+}
+.dropdown-menu {
+    overflow: scroll;
+    height: 25rem;
+}
 @media only screen and (max-width: 800px) {
     .list-group {
         position: relative
     }
+    .team_members .card {
+        width: 100%
+    }
+}
+@media only screen and (max-width: 550px) {
 }

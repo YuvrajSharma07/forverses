@@ -1,8 +1,6 @@
 <?php
-$db_connection = mysqli_connect("localhost", "forverses", "forverses", "forverses");
-if(!$db_connection) {
-    die("Can't connect: ".mysqli_connect_error());
-}
+include('header.php');
+$db_connection = dbConnect("forverses");
 $sql_query = "SELECT * FROM messages";
 $result = mysqli_query($db_connection, $sql_query);
 if (mysqli_num_rows($result) > 0) {
@@ -12,4 +10,5 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo "0 results";
 }
+mysqli_close($db_connection);
 ?>
