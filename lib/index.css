@@ -50,7 +50,7 @@ label,
 .navbar {
     display: block !important;
     padding: 0;
-    background-color: #357072 !important;
+    background-color: var(--navbar) !important;
     transition: .4s ease-out;
     animation: 1s fromtop ease;
     -webkit-animation: 1s fromtop ease;
@@ -76,7 +76,7 @@ label,
 }
 
 .bg-prime-1 {
-    background-color: #408386 !important;
+    background-color: var(--primary-color) !important;
     color: #fff
 }
 
@@ -86,17 +86,38 @@ label,
 
 .bg-prime-1-inverse {
     background-color: #fff;
-    color: #408386;
+    color: var(--primary-color);
 }
 
 .bg-prime-1-inverse h1 {
-    color: #22686b
+    color: var(--secondary-color);
 }
 
 .collabSlider {
     width: 100%;
     overflow: hidden;
     position: relative
+}
+.collabSlider .carousel {
+    width: 80%;
+    margin: 0 auto
+}
+.collabSlider .carousel .controls {
+    width: 5%
+}
+.carousel-control-prev {
+    background-image: linear-gradient(to right,rgba(0,0,0,.6) 0,rgba(0,0,0,.01) 100%) !important;
+}
+.carousel-control-next {
+    background-image: linear-gradient(to left,rgba(0,0,0,.6) 0,rgba(0,0,0,.01) 100%) !important;
+}
+.members a.card {
+    color: var(--this-color);
+    transition: .3s ease-in;
+}
+.members a.card:hover {
+    background-color: var(--this-color);
+    color: #fff
 }
 
 .sliderControls span:active,
@@ -145,27 +166,31 @@ label,
     z-index: 100
 }
 .strip-design {
-    background-image: linear-gradient(175deg, rgba(0,0,0,0) 94.9%, #82bdbf 95%),
-        linear-gradient(100deg, rgba(0,0,0,0) 94.9%, #82bdbf 95%),
-        linear-gradient(175deg, rgba(0,0,0,0) 84.9%, #157072 85%),
-        linear-gradient(100deg, rgba(0,0,0,0) 89.9%, #157072 90%),
-        linear-gradient(175deg, rgba(0,0,0,0) 80%, #084d4f 80%),
-        linear-gradient(100deg, rgba(0,0,0,0) 86.9%, #084d4f 87%);
+    background-image: linear-gradient(175deg, rgba(0,0,0,0) 94.9%, var(--variant-one) 95%),
+        linear-gradient(100deg, rgba(0,0,0,0) 94.9%, var(--variant-one) 95%),
+        linear-gradient(175deg, rgba(0,0,0,0) 89.9%, var(--variant-two) 85%),
+        linear-gradient(100deg, rgba(0,0,0,0) 90.9%, var(--variant-two) 90%),
+        linear-gradient(175deg, rgba(0,0,0,0) 84%, var(--variant-three) 80%),
+        linear-gradient(100deg, rgba(0,0,0,0) 86.9%, var(--variant-three) 87%);
     padding-bottom: 6rem !important
 }
 .strip-design-inverse {
-    background-image: linear-gradient(-9deg, rgba(0, 0, 0, 0) 83.9%, #82bdbf 84%),
-        linear-gradient(285deg, rgba(0, 0, 0, 0) 94.9%, #82bdbf 95%),
-        linear-gradient(173deg, rgba(0, 0, 0, 0) 79.9%, #157072 80%),
-        linear-gradient(109deg, rgba(0, 0, 0, 0) 85.9%, #157072 86%),
-        linear-gradient(199deg, rgba(0, 0, 0, 0) 80%, #084d4f 80%),
-        linear-gradient(313deg, rgba(0, 0, 0, 0) 79.9%, #084d4f 80%);
+    background-image: linear-gradient(-9deg, rgba(0, 0, 0, 0) 90.9%, var(--variant-one) 84%),
+        linear-gradient(285deg, rgba(0, 0, 0, 0) 95.9%, var(--variant-one) 95%),
+        linear-gradient(173deg, rgba(0, 0, 0, 0) 91.9%, var(--variant-two) 80%),
+        linear-gradient(109deg, rgba(0, 0, 0, 0) 94.9%, var(--variant-two) 86%),
+        linear-gradient(199deg, rgba(0, 0, 0, 0) 94%, var(--variant-three) 80%),
+        linear-gradient(313deg, rgba(0, 0, 0, 0) 90.9%, var(--variant-three) 80%);
 }
 #members_tab {
     min-height: 50vh
 }
 #members_tab .tab-pane {
     background-color: #ddd
+}
+.collabSlider .carousel .carousel-item.active, .collabSlider .carousel .carousel-item.carousel-item-next, .collabSlider .carousel .carousel-item.carousel-item-prev {
+    display: flex;
+    justify-content: center
 }
 @media only screen and (max-width: 550px) {
     .py-5x {
@@ -176,5 +201,12 @@ label,
     }
     #journal_intro h1 span {
         font-size: 2rem
+    }
+    .collabSlider .carousel {
+        width: 100%;
+        margin: 0
+    }
+    .collabSlider .controls {
+        width: 10%
     }
 }

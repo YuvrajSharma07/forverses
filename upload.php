@@ -39,7 +39,7 @@ $file_ext = strtolower(end(explode('.',$_FILES['attachment']['name'])));
         ?>
         <div class="alert alert-success fade show" role="alert">Upload Successful! The window will close soon so you can proceed to submitting your form.</div>
         <script>
-            window.localStorage.setItem('attachment_url', window.location.origin + "/forverses/lib/submissions/<?php echo $file_name; ?>");
+            window.localStorage.setItem('attachment_url', "lib/submissions/<?php echo $file_name; ?>");
             setTimeout(function(){
                 window.close()
             }, 3000)
