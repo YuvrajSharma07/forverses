@@ -26,6 +26,12 @@ a, button {
     overflow: scroll;
     height: 25rem;
 }
+.btn-group {
+    width: 100% !important;
+}
+.btn-group:not(.td_grp) {
+    margin: 1.5rem 0;
+}
 @media only screen and (max-width: 800px) {
     .list-group {
         position: relative

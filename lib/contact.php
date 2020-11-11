@@ -11,7 +11,9 @@ $message = test_input($_POST['message']);
 if($name == "" || $email == "" || $message == ""){
     echo '<div class="alert alert-danger alert-dismissible fade show mt-5" role="alert">Submission failed! Please fill in the form properly.<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
 } else {
-    $dbconnect = mysqli_connect('localhost', 'forverses', 'forverses', 'forverses');
+    $dbconnect = 
+//        mysqli_connect('127.0.0.1', 'u215217368_admin', '6b!p6gXZTQ', 'u215217368_forverses');
+        mysqli_connect('localhost', 'forverses', 'forverses', 'forverses');
     if (!$dbconnect) {
         die("Connection failed: ".mysqli_connect_error());
     }

@@ -1,5 +1,6 @@
 <?php
 include('header.php');
+checkAuth();
 function showPage($url){
     $file = fopen('../lib/'.$url.'.css', 'r') or die("Unable to open file.");
     while(!feof($file)){

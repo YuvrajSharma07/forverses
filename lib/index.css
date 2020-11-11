@@ -1,35 +1,37 @@
 @import url('fonts.css');
 @import url('font_var.css');
 @import url('colors.css');
-button,
-a,
-input {
+@import url('custom.css');
+button, a, input {
     outline: none !important
 }
 
 footer {
     bottom: 0;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--footer-background);
     border-top: 1px solid rgba(0, 0, 0, 0.25);
     width: 100%;
     height: 100%;
+    position: relative;
+    color: var(--footer-text)
+}
+footer a, footer a:hover, footer a:active {
+    opacity: 0.8;
+    color: var(--footer-text)
 }
 
+footer a:hover {
+    opacity: 1 !important
+}
 a {
     word-break: break-word
 }
-
 main {
     padding-top: 48px
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: var(--primary-font);
 }
 
@@ -48,33 +50,79 @@ label,
 }
 
 .navbar {
-    display: block !important;
-    padding: 0;
-    background-color: var(--navbar) !important;
+    padding: 0 0.5rem;
+    background-color: transparent !important;
     transition: .4s ease-out;
     animation: 1s fromtop ease;
     -webkit-animation: 1s fromtop ease;
+    text-align: right;
 }
-
+#mainNav .navbar-nav {
+/*    background-color: var(--navbar);*/
+    text-align: center;
+}
+.navbar-brand {
+    width: 6rem;
+    float: left;
+    padding: 0;
+    transition: .4 ease-in width;
+}
+.navbar-toggler {
+    background-color: var(--navbar)
+}
+.navbar.scrolled {
+    background-color: var(--navbar) !important;
+    padding: 0.5rem;
+}
+.homenav .navbar-brand {
+    width: 10rem
+}
+.homenav.scrolled .navbar-brand {
+    width: 6rem
+}
+.nav-item:not(.active) .nav-link {
+    opacity: 0.5
+}
 .nav-link {
-    padding: .75rem 1.5rem !important
-}
-
-.nav-item:hover a,
-.active > a {
-    background-color: rgba(0, 0, 0, 0.2);
+    padding: .75rem 1.5rem !important;
     color: #fff !important
 }
-
-#mainBanner {
+.collapse.show {
+    transition: .4s ease-in background-color;
+    background-color: var(--navbar);
+}
+.scrolled .collapse.show {
+    background-color: transparent !important
+}
+.scrolled .nav-link {
+    color: #fff !important
+}
+.nav-item:hover a, .active > a {
+    background-color: var(--navbar);
+    color: #fff !important;
+    opacity: 1 !important
+}
+.scrolled .nav-item:hover a, .scrolled .active > a {
+    background-color: rgba(0,0,0,0.3) 
+}
+#main_banner, #quotes_banner, #journal_banner, #about_us {
     position: relative;
-    background-image: url(paul-blenkhorn-sensoryarthouse--84767CQrS8-unsplash.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-origin: content-box;
+    background-attachment: fixed;
 }
-
+#quotes_banner, #journal_banner, #about_us {
+    background-attachment: scroll;
+}
+#the_team {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+main {
+    background-color: var(--variant-one);
+}
 .bg-prime-1 {
     background-color: var(--primary-color) !important;
     color: #fff
@@ -98,11 +146,11 @@ label,
     overflow: hidden;
     position: relative
 }
-.collabSlider .carousel {
+#collab_slider {
     width: 80%;
     margin: 0 auto
 }
-.collabSlider .carousel .controls {
+#collab_slider .controls {
     width: 5%
 }
 .carousel-control-prev {
@@ -137,14 +185,11 @@ label,
     visibility: hidden
 }
 
-.collabs {
-    /*    transition: .4s cubic-bezier(0.6, -0.28, 0.74, 0.05);*/
-}
-
 .custom-upload {
-    border: 3px dotted rgba(0, 0, 0, 0.3);
+    border: 3px dotted rgba(220, 220, 220, 0.6);
     font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.2)
+    background-color: rgba(220, 220, 220, 0.2);
+    color: #fff;
 }
 
 .display-4 {
@@ -166,11 +211,12 @@ label,
     z-index: 100
 }
 .strip-design {
-    background-image: linear-gradient(175deg, rgba(0,0,0,0) 94.9%, var(--variant-one) 95%),
+    --percent: 94.9%;
+    background-image: linear-gradient(175deg, rgba(0,0,0,0) var(--percent), var(--variant-one) 95%),
         linear-gradient(100deg, rgba(0,0,0,0) 94.9%, var(--variant-one) 95%),
-        linear-gradient(175deg, rgba(0,0,0,0) 89.9%, var(--variant-two) 85%),
+        linear-gradient(175deg, rgba(0,0,0,0) calc(var(--percent) - 5%), var(--variant-two) 85%),
         linear-gradient(100deg, rgba(0,0,0,0) 90.9%, var(--variant-two) 90%),
-        linear-gradient(175deg, rgba(0,0,0,0) 84%, var(--variant-three) 80%),
+        linear-gradient(175deg, rgba(0,0,0,0) calc(var(--percent) - 10%), var(--variant-three) 80%),
         linear-gradient(100deg, rgba(0,0,0,0) 86.9%, var(--variant-three) 87%);
     padding-bottom: 6rem !important
 }
@@ -186,27 +232,174 @@ label,
     min-height: 50vh
 }
 #members_tab .tab-pane {
-    background-color: #ddd
+    background-color: var(--variant-two);
 }
-.collabSlider .carousel .carousel-item.active, .collabSlider .carousel .carousel-item.carousel-item-next, .collabSlider .carousel .carousel-item.carousel-item-prev {
+#collab_slider .carousel-item.active, #collab_slider .carousel-item.carousel-item-next, #collab_slider .carousel-item.carousel-item-prev {
     display: flex;
     justify-content: center
 }
+#collab_slider .card-body {
+    padding: 0;
+}
+#collab_slider .card {
+    border-radius: 0;
+    border: 0;
+    background-color: var(--this-color);
+    color: var(--font-color);
+}
+#collab_slider .card a {
+    border: 2px solid var(--font-color);
+    border-radius: 0;
+    color: var(--font-color);
+}
+#collab_slider .card a:hover {
+    background-color: var(--font-color);
+    color: #333;
+}
+#collab_slider .card a:focus {
+    box-shadow: none !important
+}
+form.bg-prime-1-inverse fieldset {
+    border-color: var(--primary-color) !important;
+}
+form.bg-prime-1-inverse #submit {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+form.bg-prime-1-inverse #submit:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+form.bg-prime-1-inverse #submit:focus {
+    box-shadow: none !important
+}
+#eventsDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 3rem
+}
+#eventsDisplay .col-12 {
+    padding: 3rem 3rem 0 3rem;
+}
+#eventsDisplay .card, #event_title {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    border-radius: 0
+}
+#eventsDisplay .card-body, #event_title .card-body {
+    width: 80% !important;
+    align-self: center;
+    margin-top: -3rem;
+    background-color: #fff;
+    transition: .2s ease-in;
+    background-color: var(--variant-one);
+    color: #fff;
+    z-index: 1
+}
+#event_title .card-body {
+    margin-top: 50%;
+    width: 55% !important
+}
+#eventsDisplay .card-body a {
+    color: #fff !important;
+    text-decoration: none !important
+}
+#event_title .card-img-top {
+    z-index: 0;
+    position: fixed
+}
+#event_content, #event_gallery {
+    z-index: 10;
+    position: relative;
+    padding: 3rem;
+    background-color: #fff;
+}
+#event_content {
+    display: flex;
+    justify-content: center
+}
+#event_content p {
+    text-align: justify;
+    width: 50%
+}
+#eventsDisplay .card-img-top {
+    transition: .2s ease-in;
+/*    z-index: -1*/
+}
+#eventsDisplay .card:hover .card-body {
+    margin-top: -1.5rem !important;
+}
+#eventsDisplay .card:hover .card-img-top {
+    transform: scale(1.1);
+}
+.btnCustom {
+    border-color: var(--variant-three);
+    color: var(--variant-three);
+}
+.btnCustom:hover {
+    background-color: var(--variant-three);
+    color: #fff
+}
+.btnCustom:focus {
+    box-shadow: none
+}
+#event_title {
+    text-align: center;
+    background-color: var(--variant-one);
+}
 @media only screen and (max-width: 550px) {
+    h1, .h1, label {
+        font-size: 1.5rem !important
+    }
+    p, div {
+        font-size: 0.75rem !important
+    }
+    #event_content {
+        display: block;
+    }
+
+    #event_content p {
+        text-align: left;
+        width: 100%
+    }
     .py-5x {
         padding: 3rem !important
     }
-    #journal_intro h1 {
+    #about_us p {
+        padding-bottom: 6rem !important;
+    }
+    #journal_intro h1, #event_title h1 {
         font-size: 2.5rem
     }
     #journal_intro h1 span {
         font-size: 2rem
     }
-    .collabSlider .carousel {
+    #collab_slider {
         width: 100%;
         margin: 0
     }
     .collabSlider .controls {
         width: 10%
+    }
+    #eventsDisplay {
+        margin: 0
+    }
+    #eventsDisplay .col-12 {
+        padding: 0;
+        margin-bottom: 3rem
+    }
+    .strip-design {
+        --percent: 96.9%
+    }
+    #collab_slider .card-body div {
+        float: none !important;
+        width: 100% !important;
+    }
+    #eventsDisplay .card:hover .card-body {
+        margin-top: -3rem !important;
+    }
+    #eventsDisplay .card:hover .card-img-top {
+        transform: none
     }
 }
